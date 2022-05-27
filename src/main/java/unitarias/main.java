@@ -18,7 +18,7 @@ public class main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        cesta();
+        videoJuegos();
         
     }
     
@@ -54,10 +54,11 @@ public class main {
     public static void cesta(){
         Scanner sc= new Scanner(System.in);
         System.out.println("Escriba la bebida que quiere comprar, opciones:");
-        System.out.println("coca cola, fanta toronja, fanta limon, nestea");
+        System.out.println("cocacola, fanta, 7up, nestea");
         String bebida= sc.next();
         System.out.println("Escriba los litros que quiere comprar");
-        double litros = sc.nextDouble();
+        double litros= sc.nextDouble();
+        System.out.println("que");
         Barañon bara = new Barañon();
         bara.compra(bebida, litros);
     }

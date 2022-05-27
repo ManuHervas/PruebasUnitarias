@@ -13,22 +13,23 @@ public class Barañon {
     public void compra(String bebida, double litros){
         double precioLitro;
         double total;
-        if (bebida.equalsIgnoreCase("coca cola")) {
+        if (bebida.equalsIgnoreCase("cocacola")) {
             precioLitro=0.80;
             total = litros * precioLitro;
-            System.out.println("El precio será: " + total);
-        }else if(bebida.equalsIgnoreCase("fanta toronja")){
+            System.out.println("El precio será: " + total + "€");
+                    
+        }else if(bebida.equalsIgnoreCase("fanta")){
             precioLitro=0.70;
             total= litros * precioLitro;
-            System.out.println("El precio será: " + total);
-        }else if(bebida.equalsIgnoreCase("fanta limon")){
+            System.out.println("El precio será: " + total  + "€");
+        }else if(bebida.equalsIgnoreCase("7up")){
             precioLitro=0.75;
             total=litros*precioLitro;
-            System.out.println("El precio será: " + total);
+            System.out.println("El precio será: " + total  + "€");
         }else if(bebida.equalsIgnoreCase("nestea")){
             precioLitro=0.90;
             total=litros * precioLitro;
-            System.out.println("El precio será: " + total);
+            System.out.println("El precio será: " + total  + "€");
         }else{
             
             System.out.println("Bebida no disponible");
