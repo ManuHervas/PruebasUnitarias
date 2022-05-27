@@ -15,9 +15,9 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author SI
  */
-public class MetodosIT {
+public class VideoJuegoIT {
     
-    public MetodosIT() {
+    public VideoJuegoIT() {
     }
     
     @BeforeAll
@@ -28,6 +28,17 @@ public class MetodosIT {
     public static void tearDownClass() {
     }
     
+    @BeforeEach
+    public void setUp() {
+    }
+    
+    @AfterEach
+    public void tearDown() {
+    }
+
+    /**
+     * Test of clasificacion method, of class VideoJuego.
+     */
     @Test
     public void testClasificacion() {
         System.out.println("clasificacion");
@@ -38,29 +49,26 @@ public class MetodosIT {
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         if (!result.equalsIgnoreCase(expResult)) {
-            
-             fail("The test case is a prototype.");
+            fail("The test case is a prototype.");
         }
-       
+        
     }
 
     /**
-     * Test of precioEnvio method, of class Metodos.
+     * Test of precioEnvio method, of class VideoJuego.
      */
     @Test
     public void testPrecioEnvio() {
         System.out.println("precioEnvio");
-        double precio = 300.0;
+        double precio = 40;
         VideoJuego instance = new VideoJuego();
-        double expResult = 399.0;
+        double expResult = 57.2;
         double result = instance.precioEnvio(precio);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        
-        if (result!=expResult) {
+           if (result!=expResult) {
             fail("The test case is a prototype.");
         }
-        
     }
     
 }

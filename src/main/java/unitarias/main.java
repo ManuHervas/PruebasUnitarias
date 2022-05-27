@@ -58,7 +58,6 @@ public class main {
         String bebida= sc.next();
         System.out.println("Escriba los litros que quiere comprar");
         double litros= sc.nextDouble();
-        System.out.println("que");
         Barañon bara = new Barañon();
         bara.compra(bebida, litros);
     }
