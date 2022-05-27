@@ -18,6 +18,8 @@ public class main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        cesta();
+        
     }
     
     public static void videoJuegos(){
@@ -31,7 +33,7 @@ public class main {
         publico= sc.next();
         System.out.println("Ingrese el precio del juego");
         precio = sc.nextDouble();
-        Metodos meto = new Metodos();
+        VideoJuego meto = new VideoJuego();
         clasificacion = meto.clasificacion(publico);
         total = meto.precioEnvio(precio);
         System.out.println();
@@ -47,6 +49,17 @@ public class main {
         
         
         
+    }
+    
+    public static void cesta(){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Escriba la bebida que quiere comprar, opciones:");
+        System.out.println("coca cola, fanta toronja, fanta limon, nestea");
+        String bebida= sc.next();
+        System.out.println("Escriba los litros que quiere comprar");
+        double litros = sc.nextDouble();
+        Barañon bara = new Barañon();
+        bara.compra(bebida, litros);
     }
     
 }

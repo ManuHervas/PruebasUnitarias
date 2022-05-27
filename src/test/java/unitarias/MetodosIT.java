@@ -15,25 +15,9 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author SI
  */
-public class MetodosTest {
+public class MetodosIT {
     
-    public MetodosTest() {
-    }
-
-    @org.junit.jupiter.api.BeforeAll
-    public static void setUpClass() throws Exception {
-    }
-
-    @org.junit.jupiter.api.AfterAll
-    public static void tearDownClass() throws Exception {
-    }
-
-    @org.junit.jupiter.api.BeforeEach
-    public void setUp() throws Exception {
-    }
-
-    @org.junit.jupiter.api.AfterEach
-    public void tearDown() throws Exception {
+    public MetodosIT() {
     }
     
     @BeforeAll
@@ -44,42 +28,39 @@ public class MetodosTest {
     public static void tearDownClass() {
     }
     
-    @BeforeEach
-    public void setUp() {
-    }
-    
-    @AfterEach
-    public void tearDown() {
-    }
-
-    /**
-     * Test of clasificacion method, of class Metodos.
-     */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testClasificacion() {
         System.out.println("clasificacion");
-        String tipo = "";
-        Metodos instance = new Metodos();
-        String expResult = "";
+        String tipo = "niños";
+        VideoJuego instance = new VideoJuego();
+        String expResult = "+3";
         String result = instance.clasificacion(tipo);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if (!result.equalsIgnoreCase(expResult)) {
+            
+             fail("The test case is a prototype.");
+        }
+       
     }
 
     /**
      * Test of precioEnvio method, of class Metodos.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testPrecioEnvio() {
         System.out.println("precioEnvio");
-        double precio = 0.0;
-        Metodos instance = new Metodos();
-        double expResult = 0.0;
+        double precio = 300.0;
+        VideoJuego instance = new VideoJuego();
+        double expResult = 399.0;
         double result = instance.precioEnvio(precio);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        if (result!=expResult) {
+            fail("The test case is a prototype.");
+        }
+        
     }
     
 }
